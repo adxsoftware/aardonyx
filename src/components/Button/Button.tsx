@@ -1,6 +1,7 @@
 import React from "react";
 
-interface ButtonProps {
+// export is needed to remove the privacy error in storybook
+export interface ButtonProps {
   label: string;
 }
 

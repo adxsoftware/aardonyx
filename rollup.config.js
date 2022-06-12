@@ -2,10 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
-import scss from "rollup-plugin-scss";
-import postcss from "postcss";
-import autoprefixer from "autoprefixer";
-import path from "path";
+import postcss from "rollup-plugin-postcss";
 
 const packageJson = require("./package.json");
 
@@ -28,12 +25,8 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      scss({
-        processor: () => postcss([autoprefixer()]),
-        includePaths: [
-          path.join(__dirname, "../../node_modules/"),
-          "node_modules/"
-        ]
+      postcss({
+        modules: true
       })
     ]
   },

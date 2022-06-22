@@ -33,7 +33,7 @@ const Carousel = ({ children, text, dots, ...props }) => {
       <div className="slides">
         {children.map((slide, i) => {
           return (
-            <div className={current === i ? "active" : "slide"}>{slide}</div>
+            <div key={i} className={current === i ? "active" : "slide"}>{slide}</div>
           );
         })}
       </div>

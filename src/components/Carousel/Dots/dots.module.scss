@@ -1,0 +1,21 @@
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  .dot {
+    width: 2rem;
+    margin: 2rem;
+    height: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+    &:hover {
+      background-color: red;
+    }
+  }
+  .current {
+    background-color: red;
+  }
+}

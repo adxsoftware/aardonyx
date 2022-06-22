@@ -1,0 +1,17 @@
+.container {
+  padding: 20px;
+  background-color: green;
+  .slides {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.slide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
